@@ -1,19 +1,19 @@
 <?php
 
-namespace App\Http\Resource\User;
+namespace App\Http\Resource\Invoice;
 
-use App\Models\User;
+use App\Models\Invoice;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 /**
- * Class UserShowResource
+ * Class InvoiceIndexResource
  *
- * @package App\Http\Resourc\User
+ * @package App\Http\Resource\Invoice
  *
- * @mixin User
+ * @mixin Invoice
  */
-class UserShowResource extends JsonResource
+class InvoiceIndexResource extends JsonResource
 {
     /**
      * Transform the resource into an array.

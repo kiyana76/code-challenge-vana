@@ -9,7 +9,7 @@ use Illuminate\Http\Resources\Json\JsonResource;
 /**
  * Class NotificationIndexResource
  *
- * @package App\Http\Resources\Panel\Notification
+ * @package App\Http\Resource\Notification
  *
  * @mixin Notification
  */

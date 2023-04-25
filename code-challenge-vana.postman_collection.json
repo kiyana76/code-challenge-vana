@@ -1,0 +1,339 @@
+{
+	"info": {
+		"_postman_id": "a6042e4f-8525-4f6c-abf2-feb6bcd6d3ae",
+		"name": "code-challenge-vana",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8338995"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "user-index",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{code-challenge-vana-token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{code-challenge-vana-host}}/api/users",
+							"host": [
+								"{{code-challenge-vana-host}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{code-challenge-vana-token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "first_name",
+									"value": "kiyana1",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "kiyaee",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "kiyana76@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "09302828629",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Kiyana1376",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "Kiyana1376",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{code-challenge-vana-host}}/api/users",
+							"host": [
+								"{{code-challenge-vana-host}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{code-challenge-vana-token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "first_name",
+									"value": "kiyana1",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "kiyaee",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "kiyana76@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "09302828629",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{code-challenge-vana-host}}/api/users/11",
+							"host": [
+								"{{code-challenge-vana-host}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{code-challenge-vana-token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{code-challenge-vana-host}}/api/users/9",
+							"host": [
+								"{{code-challenge-vana-host}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "kiyana76@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "User1234",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "09125698105",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{code-challenge-vana-host}}/api/login",
+							"host": [
+								"{{code-challenge-vana-host}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notification",
+			"item": [
+				{
+					"name": "notification-index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{code-challenge-vana-token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{code-challenge-vana-host}}/api/notifications",
+							"host": [
+								"{{code-challenge-vana-host}}"
+							],
+							"path": [
+								"api",
+								"notifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "notification-store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{code-challenge-vana-token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "sms",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "hghdfjhwjaefwe",
+									"type": "text"
+								},
+								{
+									"key": "productable_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "productable_type",
+									"value": "shipping_system",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{code-challenge-vana-host}}/api/notifications",
+							"host": [
+								"{{code-challenge-vana-host}}"
+							],
+							"path": [
+								"api",
+								"notifications"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

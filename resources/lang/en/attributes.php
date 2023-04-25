@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\InvoiceStatusEnum;
 use App\Enums\NotificationStatusEnum;
 use App\Enums\NotificationTypeEnum;
 use App\Enums\ProductableEnum;
@@ -20,6 +21,13 @@ return [
     'product' => [
         'type' => [
             ProductableEnum::SHIPPING_SYSTEM->value => 'Shipping System'
+        ]
+    ],
+    'invoice'      => [
+        'status' => [
+            InvoiceStatusEnum::CREATED->value => 'Created',
+            InvoiceStatusEnum::PAID->value    => 'Paid',
+
         ]
     ]
 ];

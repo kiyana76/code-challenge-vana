@@ -71,6 +71,10 @@ class User extends Authenticatable implements JWTSubject
         return $this->hasMany(Notification::class);
     }
 
+    public function invoice() {
+        return $this->hasMany(Invoice::class);
+    }
+
     // ************************************ Methods ***********************************
     /**
      * Get the identifier that will be stored in the subject claim of the JWT.

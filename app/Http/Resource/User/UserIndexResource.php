@@ -9,7 +9,7 @@ use Illuminate\Http\Resources\Json\JsonResource;
 /**
  * Class UserIndexResource
  *
- * @package App\Http\Resources\Panel\User
+ * @package App\Http\Resource\User
  *
  * @mixin User
  */

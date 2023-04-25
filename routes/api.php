@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\Notification\NotificationController;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
@@ -23,4 +24,7 @@ Route::middleware('auth:api')->group(function () {
 
     Route::apiResource('notifications', NotificationController::class)->only('index', 'store');
     Route::post('notifications/change_status/{notification}',[NotificationController::class, 'changeStatus']);
+
+    Route::apiResource('invoices', InvoiceController::class)->only('index', 'show');
+    Route::post('invoices/change_status/{invoice}', [InvoiceController::class, 'changeStatus']);
 });
