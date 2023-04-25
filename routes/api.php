@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Notification\NotificationController;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,4 +20,7 @@ Route::controller(AuthController::class)->group(function () {
 });
 Route::middleware('auth:api')->group(function () {
     Route::apiResource('users', UserController::class);
+
+    Route::apiResource('notifications', NotificationController::class)->only('index', 'store');
+    Route::post('notifications/change_status/{notification}',[NotificationController::class, 'changeStatus']);
 });

@@ -7,7 +7,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
 /**
- * Class LoginRequest
+ * Class UserIndexRequest
  *
  * @package App/Http/Requests/User
  *

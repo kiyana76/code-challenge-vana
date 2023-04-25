@@ -8,7 +8,7 @@ use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules\Password;
 
 /**
- * Class UserStoreRequest
+ * Class UserUpdateRequest
  *
  * @package App/Http/Requests/User
  *

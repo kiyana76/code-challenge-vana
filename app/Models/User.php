@@ -16,7 +16,7 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
  *
  * @package App\Models\User
  *
- * @property int $id
+ * @property int    $id
  *
  * @property string $first_name
  * @property string $last_name
@@ -66,6 +66,10 @@ class User extends Authenticatable implements JWTSubject
     ];
 
     // ************************************ Relations *********************************
+
+    public function notifications() {
+        return $this->hasMany(Notification::class);
+    }
 
     // ************************************ Methods ***********************************
     /**
