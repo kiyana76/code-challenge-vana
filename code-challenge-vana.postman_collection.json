@@ -189,6 +189,36 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "User-show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{code-challenge-vana-token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{code-challenge-vana-host}}/api/users/11",
+							"host": [
+								"{{code-challenge-vana-host}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"11"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -328,6 +358,152 @@
 							"path": [
 								"api",
 								"notifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "notification-change status",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{code-challenge-vana-token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "status",
+									"value": "queued",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{code-challenge-vana-host}}/api/notifications/change_status/1",
+							"host": [
+								"{{code-challenge-vana-host}}"
+							],
+							"path": [
+								"api",
+								"notifications",
+								"change_status",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Invoice",
+			"item": [
+				{
+					"name": "invoice-index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{code-challenge-vana-token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{code-challenge-vana-host}}/api/invoices",
+							"host": [
+								"{{code-challenge-vana-host}}"
+							],
+							"path": [
+								"api",
+								"invoices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invoice Show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{code-challenge-vana-token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{code-challenge-vana-host}}/api/invoices/1",
+							"host": [
+								"{{code-challenge-vana-host}}"
+							],
+							"path": [
+								"api",
+								"invoices",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invoice-change status",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{code-challenge-vana-token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "status",
+									"value": "paid",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{code-challenge-vana-host}}/api/invoices/change_status/1",
+							"host": [
+								"{{code-challenge-vana-host}}"
+							],
+							"path": [
+								"api",
+								"invoices",
+								"change_status",
+								"1"
 							]
 						}
 					},
