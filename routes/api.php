@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::controller(AuthController::class)->group(function () {
     Route::post('login', 'login');
 });
-Route::middleware('auth:api')->group(function () {
+Route::middleware(['auth:api', 'binding'])->group(function () {
     Route::apiResource('users', UserController::class);
 
     Route::apiResource('notifications', NotificationController::class)->only('index', 'store');

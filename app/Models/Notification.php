@@ -66,9 +66,9 @@ class Notification extends Model
     // ************************************ Methods ***********************************
     public function checkCanChangeStatus(string $status): bool
     {
-        if ($this->status == NotificationStatusEnum::CREATED->value && $status == NotificationStatusEnum::QUEUED->value)
+        if ($this->status->value == NotificationStatusEnum::CREATED->value && $status == NotificationStatusEnum::QUEUED->value)
             return true;
-        if ($this->status == NotificationStatusEnum::QUEUED->value)
+        if ($this->status->value == NotificationStatusEnum::QUEUED->value)
             if (in_array($status, [NotificationStatusEnum::DELIVERED->value, NotificationStatusEnum::NOT_DELIVERED->value]))
                 return true;
         return false;

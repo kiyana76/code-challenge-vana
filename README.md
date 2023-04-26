@@ -10,5 +10,7 @@ run docker-compose exec app php artisan db:seed
 ## INFO
 you can find **postman collection** and **ER Diagram** and **docker configuration** in file structure.
 
+you can create invoices by **docker-compose exec app php artisan app:create-invoices-command**
+
 
 

@@ -17,7 +17,6 @@ return new class extends Migration
                   ->constrained()
                   ->onUpdate('cascade')
                   ->onDelete('cascade');
-            $table->string('invoice_number');
             $table->string('user_email');
             $table->string('user_mobile');
             $table->string('price');

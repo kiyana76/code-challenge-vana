@@ -9,6 +9,8 @@ use Illuminate\Foundation\Http\FormRequest;
  *
  * @package App/Http/Requests/Invoice
  *
+ * @property string $status
+ *
  */
 
 class InvoiceChangeStatusRequest extends FormRequest

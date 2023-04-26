@@ -25,15 +25,17 @@ class InvoiceIndexResource extends JsonResource
     public function toArray($request)
     {
         $response = [
-            'id' => $this->id,
-
-            'first_name' => $this->first_name,
-            'last_name'  => $this->last_name,
-            'mobile'     => $this->mobile,
-            'email'      => $this->email,
-
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
+            'id'               => $this->id,
+            'user_id'          => $this->user_id,
+            'user_email'       => $this->user_email,
+            'user_mobile'      => $this->user_mobile,
+            'price'            => $this->price,
+            'tax'              => $this->tax,
+            'discount'         => $this->discount,
+            'discount_code'    => $this->discount_code,
+            'total'            => $this->total,
+            'status'           => $this->status,
+            'status_translate' => $this->status_translate
         ];
 
         return $response;
